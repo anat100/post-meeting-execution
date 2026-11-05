@@ -1,0 +1,2 @@
+event_id,event_type,domain,company,meeting_date,external_attendees
+meeting_first_touch-testco.example-2026-11-05,meeting_first_touch,testco.example,TestCo,2026-11-05,"Priya Raman, Marcus Feld"

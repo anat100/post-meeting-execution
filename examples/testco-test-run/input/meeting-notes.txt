@@ -1,0 +1,160 @@
+FIREFLIES.AI MEETING NOTES — TEST DATA (fictional company and people)
+=====================================================================
+
+Title:      Anatco x TestCo — Demo & Next Steps
+Date:       Thursday, Nov 5, 2026
+Time:       14:00 – 14:30 CET (30 min; transcript condensed)
+Host:       Anat Gilad
+Booked:     Oct 29, 2026 (booked via the "Speed-to-lead" webinar follow-up form)
+
+Participants
+- Anat Gilad — Founder & CEO, Anatco — anat@anatco.com
+- Daniel Weber — Solutions Engineer, Anatco — daniel.weber@anatco.com
+- Priya Raman — VP Revenue Operations, TestCo — priya.raman@testco.example
+- Marcus Feld — Marketing Operations Manager, TestCo — marcus.feld@testco.example
+
+Mentioned but not present
+- Tomasz Nowak — Head of IT Security, TestCo
+- Elena Brandt — Chief Revenue Officer, TestCo
+
+---------------------------------------------------------------------
+OVERVIEW (auto-generated)
+---------------------------------------------------------------------
+TestCo (B2B SaaS, ~220 employees, Series B closed in July) wants to fix
+slow inbound lead routing and unidentified website traffic. Inbound demo
+requests currently wait ~6 hours and are routed by hand from a spreadsheet.
+Anatco demoed form enrichment + auto-routing into HubSpot and website visitor
+identification. TestCo agreed to a 21-day trial starting Monday, Nov 16,
+pending an IT security review. Budget of roughly $35–40K for this area is in
+the 2027 plan; they need it live before their sales kickoff on Jan 19.
+A scoping call was proposed for Tuesday, Nov 10 at 4pm CET — Priya to confirm.
+
+---------------------------------------------------------------------
+ACTION ITEMS (auto-generated)
+---------------------------------------------------------------------
+Anat Gilad
+- Send DPA and SOC 2 report for Tomasz's security review (by Friday, Nov 6)
+- Send a calendar invite for the scoping call once Priya confirms the time
+
+Daniel Weber
+- Share the pixel installation guide with Marcus
+- Prepare a routing-rules draft based on TestCo's territory spreadsheet
+
+Priya Raman
+- Confirm Tuesday, Nov 10 at 4pm CET for the scoping call
+- Loop in Tomasz Nowak (IT Security) on the security review
+- Brief Elena Brandt (CRO) on the trial
+
+Marcus Feld
+- Send the current territory/assignment spreadsheet to Daniel
+- Get the pixel installed on testco.example once security signs off
+
+---------------------------------------------------------------------
+TRANSCRIPT
+---------------------------------------------------------------------
+
+[00:00:04] Anat Gilad: Hi Priya, hi Marcus. Thanks for making the time. This is Daniel, our solutions engineer — he'll do most of the hands-on part today.
+
+[00:00:12] Priya Raman: Hi both. Thanks for having us. Marcus is the one who lives in our HubSpot all day, so I brought him along.
+
+[00:00:19] Marcus Feld: Hi. Yes, unfortunately I'm the routing engine right now.
+
+[00:00:24] Anat Gilad: Ha — that's actually a great place to start. You signed up after the speed-to-lead webinar. Can you walk me through what happens today when someone fills out your demo form?
+
+[00:00:34] Marcus Feld: Sure. The form submits into HubSpot, it creates a contact, and then… nothing, really. I get a Slack notification. I look the company up on LinkedIn, check the size, figure out the region, and then I check a Google Sheet that says which AE owns which territory. Then I assign it manually.
+
+[00:00:55] Anat Gilad: How long does that usually take from form fill to an AE reaching out?
+
+[00:01:00] Marcus Feld: On a good day, maybe an hour. On average we measured it last month — it was about six hours. Over a weekend it can be two days.
+
+[00:01:10] Priya Raman: And that's the part that kills me. We're paying a lot for those leads. Our Q1 target is basically double the pipeline from this year, and we just raised our Series B in July, so the board is watching pipeline closely. We cannot have demo requests sitting for six hours.
+
+[00:01:28] Anat Gilad: Understood. Is it mostly a speed problem, or also accuracy — leads going to the wrong AE?
+
+[00:01:34] Marcus Feld: Both. Maybe one in five gets reassigned because I got the territory wrong or the AE was out. And the spreadsheet is out of date half the time.
+
+[00:01:43] Anat Gilad: Got it. And the other thing you mentioned on the form was website traffic.
+
+[00:01:47] Priya Raman: Right. We have decent traffic, but we only know who about 30% of visitors are — the ones who fill a form. The rest are invisible. I'd love to know which target accounts are researching us before they ever talk to us.
+
+[00:02:01] Anat Gilad: Makes sense. Daniel, do you want to show them both flows?
+
+[00:02:05] Daniel Weber: Yep. Sharing my screen now. So first, the inbound flow. Here's a demo form, same as yours. When someone submits, Anatco enriches the contact and company — headcount, industry, region, tech stack — and then applies routing rules. You define the rules once, for example "EMEA, 200 to 2,000 employees, goes to this AE pod, round-robin." Then it writes the owner straight into HubSpot and pings the AE in Slack.
+
+[00:02:34] Marcus Feld: How long does that take end to end?
+
+[00:02:37] Daniel Weber: Usually under a minute. And if the AE is marked out of office, it skips them and logs why.
+
+[00:02:44] Marcus Feld: Okay, that alone would save me probably ten hours a week.
+
+[00:02:48] Daniel Weber: Second flow — visitor identification. You place a small pixel on testco.example. We match anonymous visits to companies, enrich them, and you can push accounts that match your ICP into HubSpot as a target account list, with the pages they looked at.
+
+[00:03:05] Priya Raman: Can we filter that so it only pushes accounts that fit? I don't want my AEs getting 500 companies a week, half of them students and competitors.
+
+[00:03:13] Daniel Weber: Yes — you set the ICP filter. Size, industry, region, and you can exclude domains like competitors.
+
+[00:03:20] Priya Raman: Good.
+
+[00:03:22] Anat Gilad: Priya, if we ran a trial, what would have to be true at the end for you to say "this worked"?
+
+[00:03:28] Priya Raman: Honestly, three things. Speed-to-lead under five minutes for inbound demo requests. At least 90% of inbound routed automatically without Marcus touching it. And on the visitor side, at least 40 new ICP accounts a month that we didn't know about.
+
+[00:03:46] Marcus Feld: Can I add one? The routing has to respect our territory rules exactly. If it puts DACH leads with the US team, my AEs will riot.
+
+[00:03:54] Anat Gilad: Fair. Daniel can build the rules directly from your territory spreadsheet so it matches what you have today.
+
+[00:04:00] Daniel Weber: Marcus, if you send me the current sheet, I'll draft the rules before the trial starts.
+
+[00:04:05] Marcus Feld: I'll send it tomorrow.
+
+[00:04:08] Priya Raman: So yes — I think we want to trial this. What do you need from us to start?
+
+[00:04:13] Anat Gilad: Two things on your side: connecting HubSpot, which takes about ten minutes, and installing the pixel. For the pixel, does anything need to go through security first?
+
+[00:04:23] Priya Raman: Yes. Anything that touches our website or customer data goes through Tomasz Nowak — he's our Head of IT Security. He'll want to see your data processing agreement and probably a SOC 2 report. He isn't here today, but I'll loop him in.
+
+[00:04:38] Anat Gilad: No problem. I'll send you our DPA and the SOC 2 report by tomorrow so Tomasz can start.
+
+[00:04:44] Daniel Weber: And Marcus, here's the pixel install guide so you can see what IT will be asked to do: anatco.com/docs/pixel-setup
+
+[00:04:52] Marcus Feld: Thanks, got it.
+
+[00:04:55] Priya Raman: On timing — our sales kickoff is January 19th. I'd really like to stand up at SKO and tell the AEs that routing is automated. So realistically this needs to be live in early January at the latest.
+
+[00:05:08] Anat Gilad: That works. If we start a 21-day trial on Monday, November 16th, you'd have results by early December — plenty of time before SKO.
+
+[00:05:17] Priya Raman: Monday the 16th works, assuming Tomasz signs off this week or early next.
+
+[00:05:22] Priya Raman: Quick question, not urgent — roughly what does this cost for a company our size? Just so I'm not surprised.
+
+[00:05:28] Anat Gilad: Happy to walk through it properly once we see trial results and know the volume. I'd rather price it on your real usage than guess today.
+
+[00:05:35] Priya Raman: That's fine. We don't need numbers now — let's see if it works first. For context, we have roughly 35 to 40K set aside in the 2027 plan for tooling in this area, so as long as it's in that range we're okay.
+
+[00:05:48] Anat Gilad: Good to know, thank you.
+
+[00:05:50] Priya Raman: Final decision on budget sits with Elena Brandt, our CRO, but she's already asked me to fix routing before SKO, so I'll brief her on the trial.
+
+[00:06:00] Anat Gilad: Great. Last thing — before the trial starts, I'd suggest a 30-minute scoping call with Daniel and Marcus to lock the routing rules and the ICP filter. That way the trial measures the right thing from day one.
+
+[00:06:12] Priya Raman: Yes, let's do that. Can we do Tuesday the 10th? Maybe 4pm our time — CET.
+
+[00:06:17] Marcus Feld: I think I have a conflict on Tuesday afternoon, let me check.
+
+[00:06:20] Priya Raman: Okay, I'll confirm by tomorrow once Marcus checks his calendar. If Tuesday doesn't work we'll find something Wednesday.
+
+[00:06:27] Anat Gilad: Perfect. I'll send the invite as soon as you confirm.
+
+[00:06:31] Priya Raman: And Fireflies is recording, right? Can you make sure we get the recording? I want to share the demo part with Elena.
+
+[00:06:37] Anat Gilad: Yes, Fireflies sends the recording and summary to everyone automatically after the call.
+
+[00:06:42] Priya Raman: Great. Thanks both, this was really useful.
+
+[00:06:45] Marcus Feld: Thanks. Talk soon.
+
+[00:06:47] Anat Gilad: Thank you both. Talk soon.
+
+[00:06:49] Daniel Weber: Bye!
+
+[END OF TRANSCRIPT]
